@@ -1,0 +1,22 @@
+
+a {
+    position: relative;
+    color:brown;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* distance from text */
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.8s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
